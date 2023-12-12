@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id='veriff-root'></div>
+    <!-- ac8a45db-fd43-41f5-9116-a90aaf7229dc -->
+    <script src='https://cdn.veriff.me/sdk/js/1.5/veriff.min.js'></script>
+
+<div id='veriff-root'></div>
+<script>
+  const veriff = Veriff({
+    host: 'https://stationapi.veriff.com',
+    apiKey: 'ac8a45db-fd43-41f5-9116-a90aaf7229dc',
+    parentId: 'veriff-root',
+    onSession: function(err, response) {
+      window.location.replace(response.verification.url);
+    }
+  });
+  veriff.setParams({
+    vendorData: ' '
+  });
+  veriff.mount();
+</script>
+</body>
+</html>
