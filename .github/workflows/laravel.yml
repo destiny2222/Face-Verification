@@ -39,7 +39,7 @@ jobs:
         script: |
           whoami
           ls -al
-          cd dex.sendrave.com
+          cd dexlog.sendrave.com
           composer update --ignore-platform-reqs
           php artisan storage:link
         
