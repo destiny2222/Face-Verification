@@ -15,30 +15,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [ApiController::class, 'createVeriffSession']);
 
-// Route::get('/', function () {
-//     $response = Http::withHeaders([
-//         'Content-Type' => 'application/json',
-//         'X-AUTH-CLIENT'=> env('PUBLICABLE_KEY'),
-//     ])->post(env('Base_Url') .'/v1/sessions/',[
-//         "verification" => [
-//             "callback" => "https://veriff.me",
-//             "person" => [
-//                 "firstName" => "John",
-//                 "lastName" => "Smith",
-//                 "idNumber" => "123456789",
-//             ],
-//             "document" => [
-//                 "number" => "B01234567",
-//                 "type" => "PASSPORT",
-//                 "country" => "EE",
-//             ],
-//             "address" => [
-//                 "fullAddress" => "Lorem Ipsum 30, 13612 Tallinn, Estonia",
-//             ],
-//             "vendorData" => "11111111",
-//         ],
-//     ]);
-//     return $response;
-// });
+Route::get('/', function () {
+  return view('welcome');
+});

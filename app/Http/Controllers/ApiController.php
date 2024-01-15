@@ -8,17 +8,6 @@ use Illuminate\Support\Facades\Http;
 class ApiController extends Controller
 {
 
-    private function generateHmacSignature($payload, $sharedSecretKey)
-    {
-        // Generate HMAC-SHA256 signature
-        $signature = hash_hmac('sha256', $payload, $sharedSecretKey);
-
-        // Convert the signature to lowercase
-        $signature = strtolower($signature);
-
-        return $signature;
-    }
-
     public function createVeriffSession(Request $request)
     {
         $baseUrl = 'https://stationapi.veriff.com/v1/';
