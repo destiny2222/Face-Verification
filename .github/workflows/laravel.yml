@@ -39,6 +39,7 @@ jobs:
         script: |
           whoami
           ls -al
-          cd folder
-          composer install --ignore-platform-reqs
+          cd dex.sendrave.com
+          composer update --ignore-platform-reqs
           php artisan storage:link
+        
