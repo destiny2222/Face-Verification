@@ -43,4 +43,4 @@ jobs:
           composer update --ignore-platform-reqs
           php artisan storage:link
           php artisan key:generate
-        
+         
